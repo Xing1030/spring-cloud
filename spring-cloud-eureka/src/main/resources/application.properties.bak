@@ -1,0 +1,28 @@
+spring.application.name=eureka-peer
+
+server.port=8001
+#当前实例的名称
+eureka.instance.hostname=dev
+#实例唯一ID
+eureka.instance.instance-id=dev
+#是否拉取服务
+eureka.client.fetch-registry=false
+#是否需要将自己注册进Eureka
+eureka.client.register-with-eureka=false
+#Eureka注册中心客户端默认的地址 Zone指一个区域
+eureka.client.service-url.defaultZone=http://localhost:8001/eureka
+#eureka.client.availability-zones.beijing:zone1
+#eureka.client.service-url.zone1 = http://localhost:10001/eureka
+
+#服务端等待时长,服务间同步数据等待时长
+eureka.server.wait-time-in-ms-when-sync-empty=0
+#自我保护机制
+eureka.server.enable-self-preservation=true
+#修改eureka nods节点数执行间隔
+eureka.server.peer-eureka-nodes-update-interval-ms=100000
+
+#日志记录 查看Eureka是怎么保存注册者的信息
+logging.level.org.springframework.cloud=debug
+logging.level.com.netflix=debug
+
+
